@@ -2,6 +2,7 @@ package com.example.enviesachat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickURL(View view){
         Toast.makeText(this,article.getUrl(),Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this,InfoUrlActivity.class);
+        startActivity(intent);
     }
 
     public void onClickAchete(View view){
