@@ -25,6 +25,7 @@
                 >
 
                     <TextView
+                        android:id="@+id/tv_nom"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="@string/article_pain_choc"
@@ -35,17 +36,21 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1">
                         <TextView
+                            android:id="@+id/tv_prix"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="1.0€"
                             android:layout_weight="1"/>
-                        <TextView
+                        <RatingBar
+                            android:id="@+id/rating_degEnvie"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="*****"
-                            android:layout_weight="3"/>
+                            android:layout_weight="3"
+                            android:rating="2"
+                            style="@style/Base.Widget.AppCompat.RatingBar.Small"/>
                     </LinearLayout>
                 <TextView
+                    android:id="@+id/tv_description"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="@string/desc_pain_choc"
@@ -80,16 +85,19 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
                 android:layout_weight="1"
-                android:src="@drawable/internet_32" />
+                android:src="@drawable/internet_32"
+                android:onClick="onClickURL" />
 
             <ToggleButton
+                android:id="@+id/toggle_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:textOff="@string/titre_achete"
-                android:textOn="@string/titre_achete" />
+                android:textOn="@string/titre_achete"
+                android:onClick="onClickAchat" />
 
         </LinearLayout>
 
