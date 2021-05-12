@@ -29,7 +29,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater =(LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.presentation_article_ligne,parent,false);
+        View view = inflater.inflate(R.layout.cell_cards,parent,false);
         return new ViewHolder(view,clickListener);
     }
 
