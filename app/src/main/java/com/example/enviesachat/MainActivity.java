@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ import com.example.enviesachat.adapter.ArticleAdapter;
 import com.example.enviesachat.bo.Article;
 
 import java.util.ArrayList;
+import java.util.zip.Inflater;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "main";
@@ -41,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
         tgBtAchete.setChecked(article.isAchete());
 
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.action_bar_details,menu);
+        return true;
     }
 
     public void onClickURL(View view){
