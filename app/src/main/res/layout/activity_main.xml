@@ -1,107 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/tv_nom"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_weight="10"
-                >
-
-                    <TextView
-                        android:id="@+id/tv_nom"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/article_pain_choc"
-                        android:layout_weight="1"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1">
-                        <TextView
-                            android:id="@+id/tv_prix"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="1.0€"
-                            android:layout_weight="1"/>
-                        <RatingBar
-                            android:id="@+id/rating_degEnvie"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="3"
-                            android:rating="2"
-                            style="@style/Base.Widget.AppCompat.RatingBar.Small"/>
-                    </LinearLayout>
-                <TextView
-                    android:id="@+id/tv_description"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/desc_pain_choc"
-                    android:layout_weight="1"
-                    />
-
-
-
-                </LinearLayout>
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    >
-
-                </LinearLayout>
-
-
-
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:text="@string/article_pain_choc" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="15"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <ImageButton
+            <TextView
+                android:id="@+id/tv_prix"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/internet_32"
-                android:onClick="onClickURL" />
+                android:text="1.0€" />
 
-            <ToggleButton
-                android:id="@+id/toggle_button"
+            <RatingBar
+                android:id="@+id/rating_degEnvie"
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:textOff="@string/titre_achete"
-                android:textOn="@string/titre_achete"
-                android:onClick="onClickAchat" />
-
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:rating="2" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/desc_pain_choc" />
+
+
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="15"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imagBt_url"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:onClick=" onClickURL"
+            android:src="@drawable/internet_32" />
+
+        <ToggleButton
+            android:id="@+id/toggle_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:onClick="onClickAchete"
+            android:textOff="@string/titre_achete"
+            android:textOn="@string/titre_achete" />
+
+    </LinearLayout>
+</LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
