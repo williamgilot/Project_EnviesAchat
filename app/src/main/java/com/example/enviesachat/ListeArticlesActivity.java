@@ -1,5 +1,6 @@
 package com.example.enviesachat;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.enviesachat.adapter.ArticleAdapter;
@@ -35,7 +37,18 @@ public class ListeArticlesActivity extends AppCompatActivity {
         }
     };
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
+        Log.i(TAG,"item selected in onOptionsItemSelected :" + item.getItemId());
+        switch (item.getItemId()){
+            case R.id.action_configuration:
+                Intent intention = new Intent(this,ConfigurationActivity.class);
+                startActivity(intention);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
